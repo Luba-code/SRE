@@ -54,6 +54,8 @@
 
 ![](https://i.imgur.com/GgF2o4P.png)
 
+從container撥號給slirp4netns(中華電信)，讓它去幫你轉接網際網路
+
 ![](https://i.imgur.com/9Ez8Pag.png)
 
 * 所以我們要去虛擬機安裝slirp和新增tao網卡
