@@ -55,6 +55,7 @@
 ![](https://i.imgur.com/GgF2o4P.png)
 
 從container撥號給slirp4netns(中華電信)，讓它去幫你轉接網際網路
+* eth0是中華電信高級網路卡(switch)
 
 ![](https://i.imgur.com/9Ez8Pag.png)
 
