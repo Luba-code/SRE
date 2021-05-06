@@ -96,6 +96,19 @@
 
 * overlay2
 
+![](https://i.imgur.com/smFmixi.png)
 
+![](https://i.imgur.com/amIDRUn.png)
 
+* 套用overlay2檔案格式，剛剛兩層都有both.txt檔，但是ls指令卻是看到upper層的both.txt，原因以圖來了解
+
+![](https://i.imgur.com/kcdyV1N.jpg)
+
+*  可以看出overlay2是由上往下看的方式，就算有同名的檔案，也是會看到的上層，而且最下面的那層是唯讀，不能做更改
+
+![](https://i.imgur.com/8SAnqv5.png)
+
+![](https://i.imgur.com/cNcW3cM.png)
+
+*  拔掉upper的both.txt，ls -al merged/看不到both.txt，因為是看upper的both.txt，剛剛刪掉了所以沒有，再看ls -al upper/會有是因為看得lower的both.txt所以還在，只是檔案權限變成c-----------
 
