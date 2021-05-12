@@ -110,5 +110,7 @@
 
 ![](https://i.imgur.com/cNcW3cM.png)
 
-*  拔掉upper的both.txt，ls -al merged/看不到both.txt，因為是看upper的both.txt，剛剛刪掉了所以沒有，再看ls -al upper/會有是因為看得lower的both.txt所以還在，只是檔案權限變成c-----------
+*  拔掉upper的both.txt，ls -al merged/看不到both.txt，因為是看upper的both.txt，剛剛刪掉了所以沒有，再看ls -al upper/會有是因為both.txt變成一個white out型態，檔案權限變成c----------
+*  merged被拔掉overlay2，就只是空資料夾，它就是被掛載的資料夾，實際上得操作都是在overlay2裡面進行，只要被掛載上去，就是對overlay2作業
+-
 
