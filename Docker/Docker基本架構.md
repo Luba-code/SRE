@@ -1,4 +1,4 @@
-# Docker
+# Docker 基本架構
 
 ![](https://i.imgur.com/9TZmiYc.jpg)
 
@@ -52,6 +52,11 @@
 
 ![](https://i.imgur.com/ZuA5v4x.png)
 
+```
+mkdir rootfs; cd rootfs; curl -o alpine.tar.gz http://dl-cdn.alpinelinux.org/alpine/v3.13/releases/x86_64/alpine-minirootfs-3.13.5-x86_64.tar.gz; tar xvf alpine.tar.gz ;rm alpine.tar.gz; cd .. 
+```
+
+
 * 看檔案系統的命令來源
 
 ![](https://i.imgur.com/wD6Dh9g.png)
@@ -104,6 +109,14 @@
 
 ![](https://i.imgur.com/N3kjfX0.png)
 
+`sudo apk add docker`
+
+`sudo rc-update add docker boot`
+
+`sudo addgroup bigred docker`
+
+
+
 ![](https://i.imgur.com/XCozIbu.png)
 
 用pstree看docker有在背景執行，因為有設定rc-update docker
@@ -114,6 +127,10 @@
 
 ![](https://i.imgur.com/gwQoBM1.png)
 
+`docker run --rm -d alpine sleep 120`
+
 ![](https://i.imgur.com/BMabBko.png)
 
 用pstree可以看在container存在之時，shim這個程序是有再啟動的，目的是為了監控container的所有一切回傳給containerd，一旦移除掉container，就會跟著消失
+
+###### tags: `Docker`
